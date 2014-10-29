@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Car World Center</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Latest compiled and minified Foundation CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.6/css/foundation.css">
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-  <!-- Latest compiled and minified Foundation JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.6/js/foundation.min.js"></script>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= render '/navigation' %>
-
-<%= yield %>
-
-</body>
+  <body>
+    <%= render 'layouts/navigation' %>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
