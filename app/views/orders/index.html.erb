@@ -1,0 +1,33 @@
+<h1>Listado de Órdenes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entry date</th>
+      <th>Expenses</th>
+      <th>Tax</th>
+      <th>Total cost</th>
+      <th>Promised date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.entry_date %></td>
+        <td><%= order.expenses %></td>
+        <td><%= order.tax %></td>
+        <td><%= order.total_cost %></td>
+        <td><%= order.promised_date %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path, class: "button medium success" %>
