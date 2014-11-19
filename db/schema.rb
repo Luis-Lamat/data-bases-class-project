@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119033821) do
+ActiveRecord::Schema.define(version: 20141119035539) do
+
+  create_table "clients", force: true do |t|
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fiscal_data", force: true do |t|
+    t.string   "RFC"
+    t.string   "entity_name"
+    t.datetime "date_of_birth"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "labors", force: true do |t|
     t.time     "estimated_time"
@@ -19,6 +35,15 @@ ActiveRecord::Schema.define(version: 20141119033821) do
     t.float    "cost"
     t.float    "external_comision"
     t.float    "internal_comision"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "street"
+    t.integer  "street_number"
+    t.string   "suburb"
+    t.integer  "postal_code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -37,6 +62,16 @@ ActiveRecord::Schema.define(version: 20141119033821) do
     t.text     "description"
     t.float    "consumible_lab"
     t.float    "consumible_general"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spare_parts", force: true do |t|
+    t.string   "name"
+    t.string   "provider"
+    t.float    "cost"
+    t.float    "extra_cost"
+    t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

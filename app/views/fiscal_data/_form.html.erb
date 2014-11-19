@@ -1,0 +1,29 @@
+<%= form_for(@fiscal_datum) do |f| %>
+  <% if @fiscal_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fiscal_datum.errors.count, "error") %> prohibited this fiscal_datum from being saved:</h2>
+
+      <ul>
+      <% @fiscal_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :RFC %><br>
+    <%= f.text_field :RFC %>
+  </div>
+  <div class="field">
+    <%= f.label :entity_name %><br>
+    <%= f.text_field :entity_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.datetime_select :date_of_birth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

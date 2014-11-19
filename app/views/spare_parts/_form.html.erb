@@ -1,0 +1,37 @@
+<%= form_for(@spare_part) do |f| %>
+  <% if @spare_part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spare_part.errors.count, "error") %> prohibited this spare_part from being saved:</h2>
+
+      <ul>
+      <% @spare_part.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :provider %><br>
+    <%= f.text_field :provider %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :extra_cost %><br>
+    <%= f.text_field :extra_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

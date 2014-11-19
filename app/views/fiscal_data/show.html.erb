@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rfc:</strong>
+  <%= @fiscal_datum.RFC %>
+</p>
+
+<p>
+  <strong>Entity name:</strong>
+  <%= @fiscal_datum.entity_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @fiscal_datum.date_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_fiscal_datum_path(@fiscal_datum) %> |
+<%= link_to 'Back', fiscal_data_path %>
