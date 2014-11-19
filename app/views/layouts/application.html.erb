@@ -19,8 +19,20 @@
         <%= render 'layouts/side_nav' %>
       </div>
 
-      <div class="large-10 columns" style="padding: 5px 10px 0px 23px;">
+      <div class="large-7 columns" style="padding: 5px 23px 0px 23px;">
         <%= yield %>
+      </div>
+
+      <div class="large-3 columns" style="height:100%; border-left:1px solid gray;">
+        <h3>SQL</h3>
+        <hr>
+        <div id="SQL" style="font-family:Consolas; background-color:rgb(254, 255, 216);">
+          <script>
+            $('#SQL').val('');
+            <% @sql = 'No hay SQL.' unless @sql %>
+            $('#SQL').append('<%= @sql %>');
+          </script>
+        </div>
       </div>
     
     <%= javascript_include_tag "application" %>
