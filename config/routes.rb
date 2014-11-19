@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :workshops
+
   resources :fiscal_data
 
   resources :clients
