@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spare_part.name %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @spare_part.provider %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @spare_part.cost %>
+</p>
+
+<p>
+  <strong>Extra cost:</strong>
+  <%= @spare_part.extra_cost %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @spare_part.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_spare_part_path(@spare_part) %> |
+<%= link_to 'Back', spare_parts_path %>
