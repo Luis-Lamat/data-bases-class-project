@@ -1,4 +1,7 @@
 class Order < ActiveRecord::Base
+  has_many :procedures, inverse_of: :order
+  belongs_to :employee, inverse_of: :orders
+
 	validates :entry_date, presence: true
 	validates :expenses, presence: true
 	validates :tax, presence: true
