@@ -8,5 +8,4 @@ class Vehicle < ActiveRecord::Base
 	validates :brand, presence: true
 	validates :color, presence: true
 	validates :placas, presence: true
-	validates :created_at, presence: true
 end
