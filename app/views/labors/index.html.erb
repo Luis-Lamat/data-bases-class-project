@@ -15,7 +15,7 @@
   <tbody>
     <% @labors.each do |labor| %>
       <tr>
-        <td><%= labor.estimated_time %></td>
+        <td><%= labor.estimated_time.strftime(" %H:%M hours " ) %></td>
         <td><%= labor.description %></td>
         <td><%= labor.cost %></td>
         <td><%= labor.external_comision %></td>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Labor', new_labor_path %>
+<%= link_to 'New Labor', new_labor_path, class: "button medium success" %>
