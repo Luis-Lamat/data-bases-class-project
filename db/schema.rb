@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119042142) do
+ActiveRecord::Schema.define(version: 20141119050455) do
 
   create_table "clients", force: true do |t|
     t.string   "first_name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "location_id"
   end
 
   create_table "employees", force: true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.datetime "date_of_birth"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "location_id"
   end
 
   create_table "labors", force: true do |t|
@@ -46,6 +48,8 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.float    "internal_comision"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "employee_id"
+    t.integer  "procedure_id"
   end
 
   create_table "locations", force: true do |t|
@@ -53,6 +57,14 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.integer  "street_number"
     t.string   "suburb"
     t.integer  "postal_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_vehicle_workshops", force: true do |t|
+    t.integer  "vehicle_id"
+    t.integer  "workshop_id"
+    t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,6 +77,7 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.datetime "promised_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "employee_id"
   end
 
   create_table "procedures", force: true do |t|
@@ -73,6 +86,7 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.float    "consumible_general"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order_id"
   end
 
   create_table "spare_parts", force: true do |t|
@@ -83,6 +97,7 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "procedure_id"
   end
 
   create_table "vehicles", force: true do |t|
@@ -93,6 +108,7 @@ ActiveRecord::Schema.define(version: 20141119042142) do
     t.string   "placas"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "client_id"
   end
 
   create_table "workshops", force: true do |t|
