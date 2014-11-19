@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Estimated time:</strong>
+  <%= @labor.estimated_time %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @labor.description %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @labor.cost %>
+</p>
+
+<p>
+  <strong>External comision:</strong>
+  <%= @labor.external_comision %>
+</p>
+
+<p>
+  <strong>Internal comision:</strong>
+  <%= @labor.internal_comision %>
+</p>
+
+<%= link_to 'Edit', edit_labor_path(@labor) %> |
+<%= link_to 'Back', labors_path %>
