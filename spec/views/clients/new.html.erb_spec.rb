@@ -1,0 +1,24 @@
+require 'rails_helper'
+
+RSpec.describe "clients/new", :type => :view do
+  before(:each) do
+    assign(:client, Client.new(
+      :first_name => "MyString",
+      :middle_name => "MyString",
+      :last_name => "MyString"
+    ))
+  end
+
+  it "renders new client form" do
+    render
+
+    assert_select "form[action=?][method=?]", clients_path, "post" do
+
+      assert_select "input#client_first_name[name=?]", "client[first_name]"
+
+      assert_select "input#client_middle_name[name=?]", "client[middle_name]"
+
+      assert_select "input#client_last_name[name=?]", "client[last_name]"
+    end
+  end
+end

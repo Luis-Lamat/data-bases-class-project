@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :clients
+
   resources :locations
 
   resources :spare_parts
