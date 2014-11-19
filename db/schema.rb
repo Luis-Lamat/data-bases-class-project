@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119032441) do
+ActiveRecord::Schema.define(version: 20141119033821) do
+
+  create_table "labors", force: true do |t|
+    t.time     "estimated_time"
+    t.text     "description"
+    t.float    "cost"
+    t.float    "external_comision"
+    t.float    "internal_comision"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "orders", force: true do |t|
     t.datetime "entry_date"
