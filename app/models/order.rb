@@ -5,5 +5,4 @@ class Order < ActiveRecord::Base
 	validates :total_cost, presence: true
 	validates :promised_date, presence: true
 	validates :created_at, presence: true
-	validates :update_at, presence: true
 end
