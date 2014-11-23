@@ -5,11 +5,13 @@ class EmployeesController < ApplicationController
   # GET /employees.json
   def index
     @employees = Employee.all
+    @sql = @employees.to_sql
   end
 
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @sql = Workshop.where(id: params[:id]).to_sql
   end
 
   # GET /employees/new

@@ -31,6 +31,10 @@
     <%= f.label :placas %><br>
     <%= f.text_field :placas %>
   </div>
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.collection_select :client_id, Client.all, :id, :full_name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -5,11 +5,13 @@ class SparePartsController < ApplicationController
   # GET /spare_parts.json
   def index
     @spare_parts = SparePart.all
+    @sql = @spare_parts.to_sql
   end
 
   # GET /spare_parts/1
   # GET /spare_parts/1.json
   def show
+    @sql = SparePart.where(id: params[:id]).to_sql
   end
 
   # GET /spare_parts/new

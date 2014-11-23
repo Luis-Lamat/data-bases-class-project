@@ -5,11 +5,13 @@ class LaborsController < ApplicationController
   # GET /labors.json
   def index
     @labors = Labor.all
+    @sql = @labors.to_sql
   end
 
   # GET /labors/1
   # GET /labors/1.json
   def show
+    @sql = Labor.where(id: params[:id]).to_sql
   end
 
   # GET /labors/new

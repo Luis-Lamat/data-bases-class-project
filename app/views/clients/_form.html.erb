@@ -23,6 +23,10 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
+    <div class="field">
+    <%= f.label :location_id %><br>
+    <%= f.collection_select :location_id, Location.all, :id, :full_address %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

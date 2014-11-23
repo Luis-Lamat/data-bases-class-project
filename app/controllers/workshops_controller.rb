@@ -5,7 +5,7 @@ class WorkshopsController < ApplicationController
   # GET /workshops.json
   def index
     @workshops = Workshop.all
-    @sql = Workshop.all.to_sql
+    @sql = @workshops.to_sql
   end
 
   # GET /workshops/1
