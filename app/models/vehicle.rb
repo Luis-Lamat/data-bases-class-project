@@ -1,6 +1,6 @@
 class Vehicle < ActiveRecord::Base
 
-  belongs_to :client, inverse_of: :vehicle
+  belongs_to :client, inverse_of: :vehicles
   has_one :order_vehicle_workshop, inverse_of: :vehicle
 
 	validates :series_num, presence: true

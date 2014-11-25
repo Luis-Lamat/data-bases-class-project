@@ -18,6 +18,7 @@ class VehiclesController < ApplicationController
   def new
     @vehicle = Vehicle.new
     @clients = Client.all
+    @sql = Client.where('COUNT(vehicles) BETWEEN 5 AND 20').to_sql
   end
 
   # GET /vehicles/1/edit

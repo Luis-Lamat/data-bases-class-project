@@ -28,6 +28,6 @@
     <%= f.collection_select :location_id, Location.all, :id, :full_address %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "button medium success" %>
   </div>
 <% end %>

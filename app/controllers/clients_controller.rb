@@ -17,6 +17,7 @@ class ClientsController < ApplicationController
   # GET /clients/new
   def new
     @client = Client.new
+    @sql = Location.all.to_sql
   end
 
   # GET /clients/1/edit
