@@ -1,0 +1,48 @@
+<h1>Reportes</h1>
+
+<style>
+  table a:visited {
+    color: white !important;
+  }
+</style>
+
+<table>
+  <thead>
+    <th>Query</th>
+    <th>Select</th>
+    <th>Go</th>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Workshops of Vehicle:</td>
+      <td>
+        <%= collection_select :get, :vehicle_id, Vehicle.all, :id, :vehicle_info %>
+      </td>
+      <td>
+        <%= link_to "GO", vehicle_workshop_path(1), class: "button tiny", id: "JAJAJA" %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Employees that worked on Vehicle:</td>
+      <td>
+        <%= collection_select :get, :vehicle_id, Vehicle.all, :id, :vehicle_info %>
+      </td>
+      <td>
+        <%= link_to "GO", employee_on_vehicle_path(1), class: "button tiny", id: "JAJAJA" %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Procedures of Vehicle:</td>
+      <td>
+        <%= collection_select :get, :vehicle_id, Vehicle.all, :id, :vehicle_info %>
+      </td>
+      <td>
+        <%= link_to "GO", root_path, class: "button tiny", id: "JAJAJA" %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

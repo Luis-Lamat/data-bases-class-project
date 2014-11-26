@@ -2,6 +2,8 @@ class FinanceController < ApplicationController
   
   def summary
 
+    @sql = "SELECT PRESUPUESTO – refacciones.costo FROM presupuesto, refacciones SELECT presupuesto FROM refacciones, mano de obra WHERE presupuesto – costo.refacciones AND presupuesto – costo.manodeobra"
+    
     # initial budget
     @budget = 20000
     @costs = 0

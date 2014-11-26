@@ -1,0 +1,7 @@
+<h3>Workshops for <%= @vehicle.vehicle_info %></h3>
+
+<ul>
+<% @vehicle.order_vehicle_workshops.each do |v| %>
+  <li><%= v.workshop.name %></li>
+<% end %>  
+</ul>

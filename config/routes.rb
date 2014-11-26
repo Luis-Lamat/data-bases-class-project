@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'reports/index' => 'reports#index', as: :reports
+
+  get 'reports/employee_on_vehicle/:id' => 'reports#employee_on_vehicle', as: :employee_on_vehicle
+
+  get 'reports/vehicle_workshop/:id' => 'reports#vehicle_workshop', as: :vehicle_workshop
+
+  get 'reports/vehicle_spare_parts/:id' => 'reports#vehicle_spare_parts', as: :vehicle_spare_parts
+
+  get 'reports/vehicle_procedures/:id' => 'reports#vehicle_procedures', as: :vehicle_procedures
+
   resources :order_vehicle_workshops
 
   get 'finance/summary' => 'finance#summary', as: :finance
