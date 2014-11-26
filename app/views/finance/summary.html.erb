@@ -1,2 +1,27 @@
-<h1>Finance#summary</h1>
-<p>Find me in app/views/finance/summary.html.erb</p>
+<h1>Finance Summary</h1>
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Presupuesto</td>
+      <td>$<%= @budget %></td>
+    </tr>
+    <tr>
+      <td>Costos</td>   
+      <td>$<%= @costs %></td>   
+    </tr>
+    <tr>
+      <td>Restante</td>   
+      <td>$<%= @budget - @costs %></td>   
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  td {
+    font-size: 25px !important;
+  }
+</style>
+
+<h3></h3>
+<h3></h3>

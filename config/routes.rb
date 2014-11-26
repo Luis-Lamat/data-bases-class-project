@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'finance/summary'
+  get 'finance/summary' => 'finance#summary', as: :finance
 
   resources :employees
 
