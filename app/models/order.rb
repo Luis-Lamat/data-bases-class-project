@@ -10,6 +10,6 @@ class Order < ActiveRecord::Base
 	validates :promised_date, presence: true
 
 	def order_info
-		id.to_s + " fecha inicial: " + (entry_date.strftime('%v')).to_s + " fecha promesa: " + (promised_date.strftime('%v')).to_s 
+		"Folio: " + id.to_s + ", Fecha inicial: " + (entry_date.strftime('%v')).to_s + ", Fecha promesa: " + (promised_date.strftime('%v')).to_s 
 	end
 end

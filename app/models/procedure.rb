@@ -4,6 +4,6 @@ class Procedure < ActiveRecord::Base
   has_many :spare_parts, inverse_of: :procedure
 
   def procedure_name
-  	description + " = " + consumible_general.to_s
+  	"Folio: " + id.to_s + ", Resumen: " + description
   end
 end

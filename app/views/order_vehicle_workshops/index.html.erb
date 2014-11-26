@@ -13,9 +13,9 @@
   <tbody>
     <% @order_vehicle_workshops.each do |order_vehicle_workshop| %>
       <tr>
-        <td><%= order_vehicle_workshop.vehicle_id %></td>
-        <td><%= order_vehicle_workshop.workshop_id %></td>
-        <td><%= order_vehicle_workshop.order_id %></td>
+        <td><%= order_vehicle_workshop.vehicle.vehicle_info %></td>
+        <td><%= order_vehicle_workshop.workshop.name %></td>
+        <td><%= order_vehicle_workshop.order.order_info %></td>
         <td><%= link_to 'Show', order_vehicle_workshop %></td>
         <td><%= link_to 'Edit', edit_order_vehicle_workshop_path(order_vehicle_workshop) %></td>
         <td><%= link_to 'Destroy', order_vehicle_workshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
