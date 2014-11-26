@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'finance/summary'
+
   resources :employees
 
   resources :workshops
