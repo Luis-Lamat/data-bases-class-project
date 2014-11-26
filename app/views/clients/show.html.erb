@@ -15,5 +15,10 @@
   <%= @client.last_name %>
 </p>
 
+<p>
+  <strong>Location:</strong>
+  <%= @client.location.full_address %>
+</p>
+
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>

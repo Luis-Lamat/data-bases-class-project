@@ -5,16 +5,20 @@ class VehiclesController < ApplicationController
   # GET /vehicles.json
   def index
     @vehicles = Vehicle.all
+    @sql = @vehicles.to_sql
   end
 
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
+    @sql = Vehicle.where(id: params[:id]).to_sql
   end
 
   # GET /vehicles/new
   def new
     @vehicle = Vehicle.new
+    @clients = Client.all
+    @sql = Client.where('COUNT(vehicles) BETWEEN 5 AND 20').to_sql
   end
 
   # GET /vehicles/1/edit
@@ -69,6 +73,6 @@ class VehiclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_params
-      params.require(:vehicle).permit(:series_num, :model, :brand, :color, :placas)
+      params.require(:vehicle).permit(:series_num, :model, :brand, :color, :placas, :client_id)
     end
 end

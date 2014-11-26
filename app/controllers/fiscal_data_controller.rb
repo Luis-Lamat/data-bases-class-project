@@ -5,11 +5,13 @@ class FiscalDataController < ApplicationController
   # GET /fiscal_data.json
   def index
     @fiscal_data = FiscalDatum.all
+    @sql = @fiscal_data.to_sql
   end
 
   # GET /fiscal_data/1
   # GET /fiscal_data/1.json
   def show
+    @sql = FiscalDatum.where(id: params[:id]).to_sql
   end
 
   # GET /fiscal_data/new

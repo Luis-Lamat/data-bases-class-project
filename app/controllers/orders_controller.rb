@@ -5,11 +5,13 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    @sql = @orders.to_sql
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @sql = Order.where(id: params[:id]).to_sql
   end
 
   # GET /orders/new

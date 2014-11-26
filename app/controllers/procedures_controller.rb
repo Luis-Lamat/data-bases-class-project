@@ -5,11 +5,13 @@ class ProceduresController < ApplicationController
   # GET /procedures.json
   def index
     @procedures = Procedure.all
+    @sql = @procedures.to_sql
   end
 
   # GET /procedures/1
   # GET /procedures/1.json
   def show
+    @sql = Procedure.where(id: params[:id]).to_sql
   end
 
   # GET /procedures/new

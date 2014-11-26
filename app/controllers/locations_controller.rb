@@ -5,11 +5,13 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
+    @sql = @locations.to_sql
   end
 
   # GET /locations/1
   # GET /locations/1.json
   def show
+    @sql = Location.where(id: params[:id]).to_sql
   end
 
   # GET /locations/new

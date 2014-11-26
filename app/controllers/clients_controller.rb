@@ -5,16 +5,19 @@ class ClientsController < ApplicationController
   # GET /clients.json
   def index
     @clients = Client.all
+    @sql = @clients.to_sql
   end
 
   # GET /clients/1
   # GET /clients/1.json
   def show
+    @sql = Client.where(id: params[:id]).to_sql
   end
 
   # GET /clients/new
   def new
     @client = Client.new
+    @sql = Location.all.to_sql
   end
 
   # GET /clients/1/edit
@@ -69,6 +72,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:first_name, :middle_name, :last_name)
+      params.require(:client).permit(:first_name, :middle_name, :last_name, :location_id)
     end
 end
