@@ -7,6 +7,10 @@ class Employee < ActiveRecord::Base
 	validates :salary, presence: true
 
 	def full_name
-		name + " " + last_name + " - Trabajos: " + labors.count.to_s 
+		name + " " + last_name + " - Trabajos: " + orders.count.to_s 
 	end
+
+  def full_name_only
+    name + " " + middle_name + " " + last_name
+  end
 end

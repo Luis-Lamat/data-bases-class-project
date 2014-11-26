@@ -5,6 +5,8 @@ class ReportsController < ApplicationController
   end
 
   def employee_on_vehicle
+    @vehicle = Vehicle.find(params[:id])
+    @sql = Vehicle.where(id: params[:id]).to_sql
   end
 
   def vehicle_workshop

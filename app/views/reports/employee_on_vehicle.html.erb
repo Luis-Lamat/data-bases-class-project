@@ -1,2 +1,16 @@
-<h1>Reports#employee_on_vehicle</h1>
-<p>Find me in app/views/reports/employee_on_vehicle.html.erb</p>
+<h2>Employees that worked on <%= @vehicle.vehicle_info %></h2>
+<hr>
+<ul>
+<style>
+  a:hover {
+    color: #43ac6a;
+  }
+</style>
+<% @vehicle.order_vehicle_workshops.each do |v| %>
+  <% if v.order.employee %>
+    <a href="<%= employee_path(v.order.employee) %>">
+      <li style="font-size:30px;"><%= v.order.employee.full_name_only %></li>      
+    </a>
+  <% end %>
+<% end %>  
+</ul>
