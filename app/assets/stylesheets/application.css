@@ -15,5 +15,30 @@
  *= require foundation_and_overrides
 
  */
+ body{
+ 	background:#2fa7ca url(http://i.imgur.com/n8OXdsZ.jpg); 
+ }
 
 select { display: inline; }
+
+h5 {
+	font-family: "helvetica"
+}
+
+h4 {
+
+	color: white;
+	font-family: "helvetica"
+}
+
+.side-nav li a:not(.button) {
+display: block;
+color: #fff;
+margin: 0;
+padding: 0.4375rem 0.875rem;
+}
+
+.side-nav{
+	background: #333333;
+}
+
