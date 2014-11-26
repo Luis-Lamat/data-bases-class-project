@@ -8,4 +8,8 @@ class Order < ActiveRecord::Base
 	validates :tax, presence: true
 	validates :total_cost, presence: true
 	validates :promised_date, presence: true
+
+	def order_info
+		id.to_s + " fecha inicial: " + entry_date.to_s + " fecha promesa: " + promised_date.to_s 
+	end
 end

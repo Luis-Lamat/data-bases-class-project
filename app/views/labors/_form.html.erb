@@ -31,6 +31,14 @@
     <%= f.label :internal_comision %><br>
     <%= f.text_field :internal_comision %>
   </div>
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.collection_select :employee_id, Employee.all, :id, :full_name %>
+  </div>
+  <div class="field">
+    <%= f.label :procedure_id %><br>
+    <%= f.collection_select :procedure_id, Procedure.all, :id, :procedure_name %>
+  </div>
   <div class="actions">
     <%= f.submit class: "button medium success" %>
   </div>

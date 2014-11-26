@@ -31,6 +31,10 @@
     <%= f.label :quantity %><br>
     <%= f.text_field :quantity %>
   </div>
+  <div class="field">
+    <%= f.label :procedure_id %><br>
+    <%= f.collection_select :procedure_id, Procedure.all, :id, :procedure_name %>
+  </div>
   <div class="actions">
     <%= f.submit class: "button medium success" %>
   </div>
