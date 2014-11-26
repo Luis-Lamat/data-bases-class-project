@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @order_vehicle_workshop.vehicle.vehicle_info %>
+</p>
+
+<p>
+  <strong>Workshop:</strong>
+  <%= @order_vehicle_workshop.workshop.name %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_vehicle_workshop.order.order_info %>
+</p>
+
+<%= link_to 'Edit', edit_order_vehicle_workshop_path(@order_vehicle_workshop) %> |
+<%= link_to 'Back', order_vehicle_workshops_path %>

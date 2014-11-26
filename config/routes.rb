@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :order_vehicle_workshops
+
   get 'finance/summary' => 'finance#summary', as: :finance
 
   resources :employees
