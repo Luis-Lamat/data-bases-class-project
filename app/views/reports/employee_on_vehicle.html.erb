@@ -9,7 +9,9 @@
 <% @vehicle.order_vehicle_workshops.each do |v| %>
   <% if v.order.employee %>
     <a href="<%= employee_path(v.order.employee) %>">
-      <li style="font-size:30px;"><%= v.order.employee.full_name_only %></li>      
+      <li style="font-size:30px;margin-bottom: 25px;">
+        <%= v.order.employee.full_name_only %>
+      </li>      
     </a>
   <% end %>
 <% end %>  

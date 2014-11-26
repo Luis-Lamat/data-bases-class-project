@@ -1,7 +1,17 @@
 <h2>Workshops for <%= @vehicle.vehicle_info %></h2>
 <hr>
 <ul>
+<style>
+  a:hover {
+    background-color: transparent;
+    color: #43ac6a;
+  }
+</style>
 <% @vehicle.order_vehicle_workshops.each do |v| %>
-  <li style="font-size:30px;"><%= v.workshop.name %></li>
+  <li style="font-size:30px;margin-bottom: 25px;">
+    <a href="<%= workshop_path(v.workshop) %>">
+      <%= v.workshop.name %>
+    </a>
+  </li>
 <% end %>  
 </ul>

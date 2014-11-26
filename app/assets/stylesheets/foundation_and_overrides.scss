@@ -1272,9 +1272,10 @@ $side-nav-divider-color: scale-color($white, $lightness: 10%);
 // $table-border-color: $gainsboro;
 
 // These control the table head styles
-// $table-head-bg: $white-smoke  ;
+$table-head-bg: #43ac6a;
+// $white-smoke;
 // $table-head-font-size: rem-calc(14);
-// $table-head-font-color: $jet;
+$table-head-font-color: white;
 // $table-head-font-weight: $font-weight-bold;
 // $table-head-padding: rem-calc(8 10 10);
 
