@@ -42,3 +42,7 @@ padding: 0.4375rem 0.875rem;
 	background: #333333;
 }
 
+table thead tr th {
+  color: white !important;
+  background-color: #43ac6a !important;
+}
