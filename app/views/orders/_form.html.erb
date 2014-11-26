@@ -31,6 +31,10 @@
     <%= f.label :promised_date %><br>
     <%= f.datetime_select :promised_date %>
   </div>
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.collection_select :employee_id, Employee.all, :id, :full_name %>
+  </div>
   <div class="actions">
     <%= f.submit class: "button medium success" %>
   </div>

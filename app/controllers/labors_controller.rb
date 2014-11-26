@@ -71,6 +71,7 @@ class LaborsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def labor_params
-      params.require(:labor).permit(:estimated_time, :description, :cost, :external_comision, :internal_comision)
+      params.require(:labor).permit(:estimated_time, :description, :cost, :external_comision, :internal_comision,
+                                    :employee_id, :procedure_id)
     end
 end

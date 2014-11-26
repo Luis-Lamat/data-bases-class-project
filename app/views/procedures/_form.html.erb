@@ -23,6 +23,10 @@
     <%= f.label :consumible_general %><br>
     <%= f.text_field :consumible_general %>
   </div>
+  <div class="field">
+    <%= f.label :order_id %><br>
+    <%= f.collection_select :order_id, Order.all, :id, :order_info %>
+  </div>
   <div class="actions">
     <%= f.submit class: "button medium success" %>
   </div>
