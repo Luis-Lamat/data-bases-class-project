@@ -31,7 +31,10 @@
             $(function(){
               $('#SQL').val('');
               <% @sql = 'No hay SQL.' unless @sql %>
-              $('#SQL').append('<%= @sql %>');  
+              <% @sql2 = '' unless @sql2 %>
+              $('#SQL').append('<%= @sql %>'); 
+              $('#SQL').append('<hr />');
+              $('#SQL').append('<%= @sql2 %>');    
             });
           </script>
         </div>
